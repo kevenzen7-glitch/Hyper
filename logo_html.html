@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arte ASCII Compacta</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        width: 100%;
+      }
+
+      body {
+        font-family: 'Courier New', monospace;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        min-height: 100vh;
+        margin: 0;
+        gap: 20px;
+        padding: 20px;
+        overflow-x: hidden;
+      }
+
+      .stage {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .ascii-art {
+        /* fonte fluida baseada na largura da tela: sempre cabe, sem barra de rolagem */
+        font-size: clamp(2.5px, 1.55vw, 12px);
+        line-height: 1.1;
+        white-space: pre;
+        color: #000000;
+        letter-spacing: 0;
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      .subtitle-svg {
+        width: clamp(140px, 46vw, 420px);
+        height: auto;
+      }
+
+      .subtitle-svg text {
+        fill: #000000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="stage">
+      <div class="ascii-art">
+   ▄█    █▄         ▄██   ▄           ▄███████▄         ▄████████         ▄████████      
+  ███    ███        ███   ██▄        ███    ███        ███    ███        ███    ███      
+  ███    ███        ███▄▄▄███        ███    ███        ███    █▀         ███    ███      
+ ▄███▄▄▄▄███▄▄      ▀▀▀▀▀▀███        ███    ███       ▄███▄▄▄           ▄███▄▄▄▄██▀      
+▀▀███▀▀▀▀███▀       ▄██   ███      ▀█████████▀       ▀▀███▀▀▀          ▀▀███▀▀▀▀▀        
+  ███    ███        ███   ███        ███               ███    █▄       ▀███████████      
+  ███    ███        ███   ███        ███               ███    ███        ███    ███      
+  ███    █▀          ▀█████▀        ▄████▀             ██████████        ███    ███      
+                                                                         ███    ███      
+      </div>
+
+      <!-- "NEW FEATURES COMING SOON" em SVG, escalável sem perder qualidade -->
+      <svg class="subtitle-svg" viewBox="0 0 620 50" xmlns="http://www.w3.org/2000/svg">
+        <text x="310" y="35" text-anchor="middle" font-family="'Courier New', monospace" font-weight="bold"
+              font-size="26" letter-spacing="6">NEW FEATURES COMING SOON</text>
+      </svg>
+    </div>
+  </body>
+</html>
